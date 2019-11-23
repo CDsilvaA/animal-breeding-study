@@ -1,5 +1,8 @@
 #!/bin/sh
-
+Developer: [
+ Cherlynn Silva <cdnsprado@gmail.com https://github.com/CDsilvaA>
+ ]
+ 
 # I thank Dr. Gerardo Alves Fernandes Júnior for this challenge.
 
 # Mandatory files (examples)

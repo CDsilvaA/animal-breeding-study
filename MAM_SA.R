@@ -1,37 +1,41 @@
 ###############################################################################################################
-# Exemplo de Modelo Multi-Racial - Sistema de Acasalamento
-# Desenvolvedores: J. Augusto II, Cherlynn Silva
-# Fonte: Mauricio Elzo
+# Example of Multi-Race Model - Mating System
+# Developers:[
+# J. Augusto II, 
+# Cherlynn Silva <cdnsprado@gmail.com https://github.com/CDsilvaA>
+# ]
+# Source: Mauricio Elzo
 #
-#                                     Documentacao
-#                       Dados fornecidos pelo usuário:
-# X: matriz de incidencia
-# r: matriz de variancias e covariancias residuais 
-# y: vetor da variavel resposta
-# P: matriz de pedigree (quem eh pai de quem)
-# da: matriz de variancias e covariancias genéticas aditivas
-# dn: matriz de variancias e covariancias genéticas nao-aditivas
-# KA: matriz de coeficientes das predicoes geneticas aditivas
-# KN: matriz de coeficientes das predicoes geneticas nao-aditivas
-# KT: matriz de coeficientes das predicoes geneticas total
-#
-#
-#                       Dados calculados pelo script:
-# Ga: matriz inversa de variancias e covariancias genéticas aditivas
-# Gn: matriz inversa de variancias e covariancias genéticas nao-aditivas
-# lhs: matriz left hand
-# rhs: matriz right hand
-# y_hat: vetor das solucoes
-# se_y_hat: erros padrao das solucoes
-# AMBV: solucoes das predicoes geneticas aditivas (desvios da raca B em relacao a raca A)
-# SEP_AMBV: erros padrao da matriz de coeficientes das predicoes geneticas aditivas
-# NMBV: solucoes das predicoes geneticas nao-aditivas (assumindo que machos sao acasalados com femeas 1/2A1/2B e vice-versa)
-# SEP_NMBV: erros padrao da matriz de coeficientes das predicoes geneticas nao-aditivas
-# TMBV: solucoes das predicoes geneticas total (soma de AMBV e NMBV)
-# SEP_TMBV: erros padrao da matriz de coeficientes das predicoes geneticas total
+# Documentation
+# Data provided by the user:
+# X: incidence matrix
+# r: a matrix of variances and residual covariances 
+# y: vector of the response variable
+# P: pedigree matrix (who is whose father)
+# da: matrix of variances and additive genetic covariances
+# dn: matrix of variances and non-additive genetic covariances
+# KA: matrix of coefficients of additive genetic predications
+# KN: matrix of coefficients of non-additive genetic predications
+# KT: matrix of coefficients of total genetic prediction
 #
 #
-#                              Pacotes necessarios (calculo da inversa generalizada)
+# Data calculated by the script:
+# Ga: inverse matrix of variances and additive genetic covariances
+# Gn: inverse matrix of variances and nonadditive genetic covariances
+# lhs: matrix left hand
+# rhs: right hand matrix
+# y_hat: vector of the solutions
+# se_y_hat: standard solutions mistakes
+# AMBV: additive genetic prediction solutions (deviations of breed B from breed A)
+# SEP_AMBV: standard errors of the matrix of coefficients of additive genetic predications
+# NMBV: non-additive genetic prediction solutions (assuming males are paired with females 1/2A1/2B and vice versa)
+# SEP_NMBV: standard errors of the matrix of coefficients of nonadditive genetic predications
+# TMBV: total genetic prediction solutions (sum of AMBV and NMBV)
+# SEP_TMBV: standard errors of the matrix of coefficients of total genetic predications
+#
+#
+# Necessary packages (calculation of the generalized inverse)
+
 library(MASS)
 #
 #
